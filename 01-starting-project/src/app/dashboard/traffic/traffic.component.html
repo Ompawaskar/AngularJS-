@@ -1,0 +1,15 @@
+<app-dashboard-item 
+  title="Traffic"
+  imgSrc="globe.png"
+  imgAlt="Traffic Image"
+>
+  <div id="traffic">
+    <p>Last 7 days</p>
+
+    <div id="chart">
+      @for (dataPoint of dummyTrafficData; track dataPoint.id) {
+      <div [style.height]="(dataPoint.value / maxTraffic) * 100 + '%'"></div>
+      }
+    </div>
+  </div>
+</app-dashboard-item>
